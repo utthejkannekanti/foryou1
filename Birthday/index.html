@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Naveen ❤️</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= MUSIC ================= -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">
+    🎵 Play Music
+</button>
+
+<!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+    <h1>Loading Surprise...</h1>
+
+</div>
+
+<!-- ===================================================
+                    SLIDE 1
+=================================================== -->
+
+<section class="page active" id="page1">
+
+<div class="gradient"></div>
+<div class="starsHome"></div>
+<div id="homeFireworks"></div>
+<div class="sparkles"></div>
+<div class="card">
+
+<h1>Happy Birthday</h1>
+
+<h2></h2>
+
+<p>
+
+Wishing you the happiest birthday ra🫂✨
+May your life always be filled with endless happiness, laughter, and beautiful moments. 
+I pray that God blesses you abundantly with good health, great success, peace, wealth, and all the love your heart deserves.
+ May every dream you have come true.
+
+</p>
+
+<button class="nextBtn" data-next="page2">
+
+Open Chey raa...
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================================================
+                    SLIDE 2
+=================================================== -->
+
+<section class="page" id="page2">
+
+    <!-- Moon -->
+    <div class="moon"></div>
+
+    <!-- Stars -->
+    <div class="stars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+    <!-- Fireworks -->
+    <div id="fireworks"></div>
+
+    <div class="centerBox">
+
+        <h1>Happy Birthday Mummy 🎂</h1>
+
+       <p1>
+if (today === "Your Birthday") {<br>
+
+    console.log("🎂 Happy Birthday, My Love ❤️");<br>
+
+    let blessings = [<br>
+        "Unlimited Happiness 😊",<br>
+        "Good Health 💪",
+        "Endless Success 🚀",
+        "Peace ☮️",
+        "Prosperity 💰",
+        "God's Blessings 🙏"
+    ];<br>
+    blessings.forEach(blessing => receive(blessing));<br>
+    while (life) {<br>
+        smile++;<br>
+        laugh++;<br>
+        love++;<br>
+        happiness++;<br>
+    }<br>
+
+    console.log("You are my favorite notification,");<br>
+    console.log("my sweetest memory,");<br>
+    console.log("and the best chapter of my life. ❤️");<br>
+}<br>
+</p1>
+
+        <button class="nextBtn" data-next="page3">
+            Press Enter.. 
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================================
+                    SLIDE 3
+=================================================== -->
+
+<section class="page" id="page3">
+
+    <!-- Background Effects -->
+    <div class="stars3"></div>
+    <div class="flowers"></div>
+    <div class="sparkles3"></div>
+    <div class="hearts3"></div>
+
+    <div class="birthdayContent">
+
+        <h1>Happy Birthday Bujiikanna 💚</h1>
+
+        <div class="photoSlider">
+
+            <img src="images/navenn2.jpg" class="slidePhoto active">
+            <img src="images/naveen3.jpg" class="slidePhoto">
+            <img src="images/naveen4.jpg" class="slidePhoto">
+            <img src="images/naveen5.jpg" class="slidePhoto">
+            <img src="images/naveen1.jpg" class="slidePhoto">
+
+        </div>
+
+        <div class="birthdayText">
+
+            <p>
+Every smile of yours means the world to me.
+ You are the most beautiful dream I could never fully have,
+  yet you'll always hold a special place in my heart.
+   I truly love the way you are. 
+    Happy Birthday BujiiMummy🫂😘
+
+            </p>
+
+            <!-- <h2>Made with yours.......</h2> -->
+        <button class="nextBtn" data-next="page4">
+    One Last 🖤
+</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+        SLIDE 4
+========================== -->
+
+<section class="page" id="page4">
+
+    <canvas id="loveCanvas"></canvas>
+
+    <div class="loveMessage">
+          <h1>Happy Birthday Nani❤️ </h1>
+
+        <p>
+         Your birthday is as special to me as you are. 
+         Everything connected to you special to me. 
+         May you always smile and stay happy. 🤍
+         I think neku nachidhi ani anukuntunna kids ki ichinattu unda ayina ok because u r my kid ra 😻
+            Happy Birthday ra  ❤️
+
+        </p>
+
+        <h2>Love You ra ❤️</h2>
+    </div>
+
+</section>
+
+<!-- Canvas -->
+
+<canvas id="canvas"></canvas>
+
+<!-- JS -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

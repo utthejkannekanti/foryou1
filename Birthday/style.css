@@ -1,0 +1,1494 @@
+/* ==========================
+Google Font
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+Body
+========================== */
+
+body{
+
+    background:#000;
+    color:#fff;
+}
+
+/* ==========================
+Music Button
+========================== */
+
+#musicBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff4d94;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px hotpink;
+
+    transition:.3s;
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.1);
+
+    background:#ff1493;
+
+}
+
+/* ==========================
+Loader
+========================== */
+
+#loader{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    animation:loader 3s forwards;
+
+}
+
+#loader h1{
+
+    font-size:60px;
+
+    color:white;
+
+    font-family:'Great Vibes';
+
+}
+
+@keyframes loader{
+
+0%{
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
+
+/* ==========================
+Pages
+========================== */
+
+.page{
+
+position:absolute;
+
+width:100%;
+
+height:100vh;
+
+left:0;
+
+top:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:1s;
+
+}
+
+.page.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+/* ==========================
+Slide 1
+========================== */
+
+#page1{
+
+background:linear-gradient(135deg,#84e992,#8e44ff,#4da6ff);
+
+overflow:hidden;
+
+}
+
+/* Animated Gradient */
+
+.gradient{
+
+position:absolute;
+
+width:300%;
+
+height:300%;
+
+background:linear-gradient(
+45deg,
+#ff4da6,
+#ff66cc,
+#7c4dff,
+#00c6ff,
+#ff4da6
+);
+
+animation:bgMove 12s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+transform:translate(-30%,-30%) rotate(0deg);
+
+}
+
+100%{
+
+transform:translate(-20%,-20%) rotate(360deg);
+
+}
+
+}
+/* ===========================
+   HOME STARS
+=========================== */
+
+.starsHome{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 15px white;
+
+    animation:twinkleStar 2s infinite alternate;
+
+}
+
+@keyframes twinkleStar{
+
+    0%{
+
+        transform:scale(0.5);
+
+        opacity:.3;
+
+    }
+
+    100%{
+
+        transform:scale(1.8);
+
+        opacity:1;
+
+    }
+
+}
+/* ===========================
+   HOME FIREWORKS
+=========================== */
+
+#homeFireworks{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.homeParticle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    animation:homeBurst 1.8s ease-out forwards;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px currentColor,
+        0 0 40px currentColor;
+
+}
+
+@keyframes homeBurst{
+
+    from{
+
+        transform:translate(0,0) scale(1);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(.2);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================
+Card
+========================== */
+
+.card{
+
+position:relative;
+
+width:700px;
+
+padding:60px;
+
+text-align:center;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:
+
+0 0 40px rgba(255,255,255,.25);
+
+animation:cardUp 1.5s;
+
+z-index:100;
+
+}
+
+@keyframes cardUp{
+
+from{
+
+transform:translateY(120px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+}
+
+.card h1{
+
+font-size:70px;
+
+font-family:'Great Vibes';
+
+color:white;
+
+text-shadow:0 0 20px gold;
+
+}
+
+.card h2{
+margin-top:20px;
+font-size:45px;
+color:#ffe600;
+ font-family:'Dancing Script', cursive;
+}
+
+.card p{
+margin-top:30px;
+font-size:22px;
+line-height:1.8;
+font-family:'Poppins', sans-serif;
+color:#fff;
+}
+
+/* ==========================
+Button
+========================== */
+
+.nextBtn{
+
+margin-top:40px;
+
+padding:18px 50px;
+
+font-size:22px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:#ff2f92;
+
+color:white;
+
+box-shadow:
+
+0 0 20px hotpink;
+
+transition:.4s;
+
+animation:pulse 2s infinite;
+
+}
+
+.nextBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 15px hotpink;
+
+}
+
+50%{
+
+box-shadow:0 0 45px white;
+
+}
+
+100%{
+
+box-shadow:0 0 15px hotpink;
+
+}
+
+}
+/* ==========================
+Sparkles
+========================== */
+
+.sparkles{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:60px 60px;
+
+opacity:.3;
+
+animation:twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.2;
+
+}
+
+to{
+
+opacity:.7;
+
+}
+}
+
+/* ===================================
+   PAGE 2 BACKGROUND
+=================================== */
+
+#page2{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#1b3b8a 0%,#09133f 35%,#030318 75%,#000000 100%);
+
+}
+/* Night Glow */
+
+#page2::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(circle at 80% 20%,
+rgba(255,255,255,.18),
+transparent 35%),
+
+radial-gradient(circle at 30% 40%,
+rgba(90,120,255,.18),
+transparent 40%),
+
+radial-gradient(circle at 50% 100%,
+rgba(20,40,120,.45),
+transparent 70%);
+
+pointer-events:none;
+
+}
+.moon{
+
+position:absolute;
+
+top:60px;
+
+right:90px;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle at 35% 35%,
+#ffffff,
+#fff7b0 65%,
+#f5d76e 100%);
+
+box-shadow:
+
+0 0 40px white,
+
+0 0 90px #fff7b0,
+
+0 0 160px #ffffaa;
+
+animation:moonGlow 4s infinite alternate;
+
+z-index:5;
+
+}
+.birthdayText p1{
+    font-family: "Courier New", monospace;
+    background: rgba(0,0,0,0.45);
+    color: #00ff9d;
+    border-left: 4px solid #00ff9d;
+    padding: 20px;
+    border-radius: 12px;
+    white-space: pre-line;
+    line-height: 1.8;
+    box-shadow: 0 0 25px rgba(0,255,157,0.4);
+}
+.stars{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+}
+
+.stars span{
+
+position:absolute;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 8px white,
+
+0 0 15px white;
+
+animation:twinkle 2s infinite;
+
+}
+.cloud{
+
+position:absolute;
+
+background:white;
+
+opacity:.10;
+
+filter:blur(10px);
+
+border-radius:100px;
+
+}
+
+/* ==========================
+Slide 3
+========================== */
+
+#page3{
+
+background:linear-gradient(135deg,#769ed6,#69d5fa,#ffb347);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.card{
+
+width:90%;
+
+padding:35px;
+
+}
+
+.card h1{
+
+font-size:45px;
+
+}
+
+.card h2{
+
+font-size:30px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+}
+
+.nextBtn{
+
+font-size:18px;
+
+padding:15px 35px;
+
+}
+
+}
+
+/* ===========================================
+PAGE 2
+=========================================== */
+
+#page2{
+    background:linear-gradient(to bottom,#020111,#06163b,#0a2458,#102b70);
+    overflow:hidden;
+}
+
+/* Moon */
+
+.moon{
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    top:70px;
+    right:120px;
+
+    box-shadow:
+    0 0 20px white,
+    0 0 60px #ffffcc,
+    0 0 120px #ffff99;
+
+    animation:moonGlow 3s infinite alternate;
+}
+
+@keyframes moonGlow{
+
+from{
+
+box-shadow:
+0 0 20px white,
+0 0 60px white;
+
+}
+
+to{
+
+box-shadow:
+0 0 40px white,
+0 0 90px gold,
+0 0 140px white;
+
+}
+
+}
+
+/* Stars */
+
+.stars span{
+
+position:absolute;
+
+width:4px;
+height:4px;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 2s infinite;
+
+}
+
+/* Random Positions */
+
+.stars span:nth-child(1){top:40px;left:120px;}
+.stars span:nth-child(2){top:80px;left:350px;}
+.stars span:nth-child(3){top:150px;left:600px;}
+.stars span:nth-child(4){top:250px;left:150px;}
+.stars span:nth-child(5){top:120px;left:900px;}
+.stars span:nth-child(6){top:220px;left:1100px;}
+.stars span:nth-child(7){top:90px;left:1300px;}
+.stars span:nth-child(8){top:320px;left:800px;}
+.stars span:nth-child(9){top:400px;left:500px;}
+.stars span:nth-child(10){top:180px;left:1000px;}
+.stars span:nth-child(11){top:500px;left:200px;}
+.stars span:nth-child(12){top:550px;left:1200px;}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(2);
+
+}
+
+}
+
+/* Clouds */
+
+.cloud{
+
+position:absolute;
+
+background:white;
+
+opacity:.12;
+
+border-radius:100px;
+
+filter:blur(2px);
+
+}
+
+.cloud::before,
+.cloud::after{
+
+content:"";
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+}
+
+.cloud1{
+
+width:220px;
+height:60px;
+
+top:100px;
+left:-250px;
+
+animation:cloudMove 50s linear infinite;
+
+}
+
+.cloud1::before{
+
+width:90px;
+height:90px;
+
+left:20px;
+top:-35px;
+
+}
+
+.cloud1::after{
+
+width:120px;
+height:120px;
+
+right:25px;
+top:-60px;
+
+}
+
+.cloud2{
+
+width:260px;
+height:70px;
+
+top:220px;
+left:-400px;
+
+animation:cloudMove 70s linear infinite;
+
+}
+
+.cloud2::before{
+
+width:100px;
+height:100px;
+
+left:40px;
+top:-35px;
+
+}
+
+.cloud2::after{
+
+width:120px;
+height:120px;
+
+right:40px;
+top:-50px;
+
+}
+
+.cloud3{
+
+width:200px;
+height:55px;
+
+top:340px;
+left:-300px;
+
+animation:cloudMove 90s linear infinite;
+
+}
+
+.cloud3::before{
+
+width:90px;
+height:90px;
+
+left:25px;
+top:-35px;
+
+}
+
+.cloud3::after{
+
+width:100px;
+height:100px;
+
+right:30px;
+top:-40px;
+
+}
+
+@keyframes cloudMove{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(1800px);
+
+}
+
+}
+
+/* Center Text */
+
+.centerBox{
+
+position:relative;
+
+z-index:100;
+
+text-align:center;
+
+}
+
+.centerBox h1{
+
+font-size:70px;
+
+font-family:'Great Vibes';
+
+text-shadow:0 0 25px gold;
+
+}
+
+.centerBox p{
+
+width:700px;
+
+margin:25px auto;
+
+font-size:22px;
+
+line-height:1.8;
+
+}
+/* ===========================
+      PARTICLE FIREWORKS
+=========================== */
+
+#fireworks3{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    animation:burst 1.8s ease-out forwards;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 20px currentColor,
+    0 0 40px currentColor;
+
+}
+
+@keyframes burst{
+
+    from{
+
+        transform:translate(0,0) scale(1);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(.2);
+
+        opacity:0;
+
+    }
+
+}
+/* ==========================================
+PAGE 3===========
+========================================== */
+
+#page{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:1s;
+
+}
+
+#page.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* Stars */
+
+.stars3{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(white 2px,transparent 2px),
+radial-gradient(white 1px,transparent 1px);
+
+background-size:120px 120px,70px 70px;
+
+animation:starMove 80s linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes starMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(400px);
+
+}
+
+}
+
+/* Sparkles */
+
+.sparkles3{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(#ffd700 2px,transparent 2px);
+
+background-size:80px 80px;
+
+animation:sparkMove 10s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes sparkMove{
+
+from{
+
+transform:translateY(-100px);
+
+}
+
+to{
+
+transform:translateY(100px);
+
+}
+
+}
+
+/* Flowers */
+
+.flowers{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+}
+
+.flowers::before{
+
+content:"";
+
+position:absolute;
+
+font-size:35px;
+
+left:-10%;
+
+top:-10%;
+
+animation:flowerFall 18s linear infinite;
+
+}
+
+@keyframes flowerFall{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(720deg);
+
+}
+
+}
+
+/* Heading */
+
+.birthdayContent{
+
+position:relative;
+
+z-index:100;
+
+text-align:center;
+
+padding-top:40px;
+
+color:white;
+
+}
+
+.birthdayContent h1{
+
+font-size:60px;
+
+font-family:'Great Vibes',cursive;
+
+margin-bottom:20px;
+
+text-shadow:0 0 25px hotpink;
+
+}
+
+/* Photo Slider */
+
+.photoSlider{
+display: flex;
+position:relative;
+justify-content: center;
+width:340px;
+height:430px;
+margin:auto;
+}
+
+.slidePhoto{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:25px;
+
+border:6px solid white;
+
+box-shadow:
+
+0 0 30px white,
+
+0 0 60px deeppink,
+
+0 0 100px gold;
+
+opacity:0;
+
+transform:scale(.8);
+
+transition:1.5s;
+
+}
+
+.slidePhoto.active{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+/* Message */
+
+.birthdayText{
+width:70%;
+margin:40px auto;
+font-size:20px;
+line-height:1.8;
+
+}
+.hearts3{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:3;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-60px;
+
+font-size:28px;
+
+animation:heartFloat 12s linear forwards;
+
+filter:drop-shadow(0 0 8px hotpink);
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(0)
+scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+translateX(80px)
+scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+/*=====================================
+            PAGE 4
+======================================*/
+
+/* #page4{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+radial-gradient(circle at top,#300050,#140021,#040008);
+
+} */
+ #page4{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgb(23, 22, 22);
+    color:white;
+    font-size:50px;
+}
+
+/* Canvas */
+
+#loveCanvas{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:1;
+
+}
+
+/* Text */
+
+.loveMessage{
+
+position:relative;
+
+z-index:100;
+
+width:75%;
+
+text-align:center;
+
+color:white;
+
+}
+
+.loveMessage h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:75px;
+
+color:#ff7ad9;
+
+text-shadow:
+0 0 20px hotpink,
+0 0 50px deeppink,
+0 0 90px #ff99ff;
+
+margin-bottom:30px;
+
+}
+
+.loveMessage p{
+
+font-size:24px;
+
+line-height:1.9;
+
+font-weight:300;
+
+max-width:900px;
+
+margin:auto;
+
+color:#ffffff;
+
+text-shadow:0 0 10px rgba(255,255,255,.4);
+
+}
+
+.loveMessage h2{
+
+margin-top:35px;
+
+font-family:'Great Vibes';
+
+font-size:55px;
+
+color:#ffddee;
+
+text-shadow:0 0 20px hotpink;
+
+}
+
+/* Floating Hearts */
+
+.loveHeart{
+
+position:absolute;
+
+font-size:22px;
+
+animation:heartFloat 12s linear infinite;
+
+opacity:.8;
+
+pointer-events:none;
+
+z-index:2;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(100vh) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.4);
+
+opacity:0;
+
+}
+
+}
